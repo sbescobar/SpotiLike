@@ -1,5 +1,6 @@
-# SpotiLike
-Like current song played on your Spotify with keystroke.
+# Spotilike 🎵
+
+Like your current Spotify song with a single keystroke—no windows, no interruptions.
 ---
 
 🛠️ #The Problem
@@ -20,12 +21,12 @@ As a power user and multitasker, I found it disruptive to Alt-Tab out of a focus
   Hardware Bridge: Uses an AutoHotkey (v2) to trigger the Python backend silently.
 ---
 📦 # Prerequisites
-  Windows 10/11: The compiled version is built for Windows.
+  Windows 10/11
 
   AutoHotkey v2.0+: Required to run the .ahk bridge that listens for the macro keys.
   
-  Python 3.8+: Installed on your system.
-  Pip Libraries: You will need to install the following dependencies: pip install spotipy python-dotenv pyinstaller
+  Python 3.8+
+    Pip Libraries: You will need to install the following dependencies: pip install spotipy python-dotenv pyinstaller
 ---
 📦 # Installation & Setup
 
@@ -41,6 +42,46 @@ As a power user and multitasker, I found it disruptive to Alt-Tab out of a focus
 
   Build the EXE: python -m PyInstaller --onefile --noconsole Spotilike.py
 ---
+🚀 Quick Start Guide
+Step 1: Create your Spotify "App"
+
+    Go to the Spotify Developer Dashboard.
+
+    Click Create App.
+
+        App Name: Spotilike
+
+        Redirect URI: http://127.0.0.1:8000/callback (Required for the handshake).
+
+    Save and copy your Client ID and Client Secret.
+
+Step 2: Configure & Build
+
+    Clone this repository or download the files.
+
+    Open Spotilike.py in a text editor and paste your credentials into the CLIENT_ID and CLIENT_SECRET fields.
+
+    Run the provided setup_spotilike.bat file. This will automatically:
+
+        Install necessary libraries (spotipy, pyinstaller).
+
+        Build your personalized, secure Spotilike.exe in the /dist folder.
+
+Step 3: The One-Time "Handshake"
+
+    Run the new Spotilike.exe from your /dist folder.
+
+    A browser window will open—log in and click Agree.
+
+    Once you see "Success," close the browser. A .cache file will appear in your folder. Do not delete this—it is your permanent "passport" for silent liking.
+
+Step 4: Map your Hardware
+
+    In iCUE (or your keyboard software): Assign a macro key (e.g., G3) to trigger F13.
+
+    In Spotilike_hotkey.ahk: Update the SpotifyScriptPath variable to point to your /dist folder.
+
+    Run the AHK script. Play a song, hit your macro key, and watch the heart fill up on Spotify!
 🛡️ #Security Note
 
 This project uses OAuth2. Your personal CLIENT_SECRET and .cache tokens should never be committed to a public repository. A .gitignore is included to prevent accidental leaks.
