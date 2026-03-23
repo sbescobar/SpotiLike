@@ -75,71 +75,21 @@ Step 3: The One-Time "Handshake"
 
     Once you see "Success," close the browser. A .cache file will appear in your folder. Do not delete this—it is your permanent "passport" for silent liking.
 
-Step 4: Map your Hardware
-
-    In iCUE (or your keyboard software): Assign a macro key (e.g., G3) to trigger F13.
+Step 4: Map your Folder
 
     In Spotilike_hotkey.ahk: Update the SpotifyScriptPath variable to point to your /dist folder.
 
-    Run the AHK script. Play a song, hit your macro key, and watch the heart fill up on Spotify!
+    Run the AHK script. Play a unliked song, hit your macro key, and watch the + symbol turn into a checkmark fill on Spotify!
 🛡️ #Security Note
 
 This project uses OAuth2. Your personal CLIENT_SECRET and .cache tokens should never be committed to a public repository. A .gitignore is included to prevent accidental leaks.
 ---
 
-This "Quick Start" guide is perfect for your README because it breaks the process down into bite-sized, logical steps. It transitions from the "Web Setup" (Spotify) to the "Local Setup" (Files) and finally the "Hardware Setup" (iCUE).
-🚀 Quick Start Guide
-
-Follow these steps to get Spotilike running on your machine in under 5 minutes.
-
-#Step 1: Create your Spotify "App"
-
-Before running the code, you need your own API keys from Spotify.
-
-  Go to the Spotify Developer Dashboard. (https://developer.spotify.com/dashboard) 
-
-  Log in and click Create App.
-
-  App Name: Spotilike (or anything you prefer).
-
-  Redirect URI: You MUST add http://127.0.0.1:8000/callback to the Redirect URIs field in settings.
-
-  Save and copy your Client ID and Client Secret.
-
-#Step 2: Configure the Script
-
-  Download the Spotilike.py file from the /src folder.
-
-  Open the file in any text editor (Notepad, VS Code, etc.).
-
-  Paste your Client ID and Client Secret into the designated variables at the top of the script.
-
-  (Optional) If you are using the pre-compiled .exe, ensure it is in the same folder as your .ahk script.
-
-#Step 3: The One-Time "Handshake"
-
-  Double-click Spotilike.exe (or run the .py script manually).
-
-  A browser window will automatically open asking you to log in to Spotify and "Agree" to the permissions.
-
-  Once you see the "Success" message in your browser, close it.
-
-  A file named .cache will appear in your folder. Do not delete this—it is your "passport" that allows the script to run silently in the future.
-
-#(OPTIONAL)Step 4: Map your Hardware (iCUE Users)
-
-To make your G-key trigger the script invisibly:
-
-  In iCUE: Assign any of the macro keys to a "Keyboard Key" and select F13.
-
-  In AutoHotkey: Run the Spotilike.ahk script.
-
-  Test it: Play a song on Spotify and hit G3. If the song appears in your "Liked Songs" without a window popping up, you’re all set!
 
 ---
   🛡️ Pro-Tip: Make it "Always On"
 
-To ensure your G3 key works every time you turn on your PC:
+To ensure your hotkey works every time you turn on your PC:
 
   Press Win + R, type shell:startup, and hit Enter.
 
