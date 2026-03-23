@@ -1,2 +1,2 @@
 # SpotiLike
-Like current song played on your Spotify.
+Like current song played on your Spotify with keystroke.
