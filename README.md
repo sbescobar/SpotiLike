@@ -32,7 +32,7 @@ Spotilike is a lightweight Python integration that maps a physical macro key to 
 
 - **Python 3+**
 
-(Mac OS:apple: and Linux:penguin: versions coming soon!)
+(Mac OS 🍎 and Linux 🐧 versions coming soon!)
 
 ---
 
